@@ -7,8 +7,8 @@ A live, single-screen tip calculator and bill splitter. No "Calculate" button �
 **Prerequisites:** Node.js ≥ 18
 
 ```bash
-git clone https://github.com/TaibaAsif123/tipsplit.git
-cd tipsplit
+https://github.com/TaibaAsif123/TipCalculator.git
+cd TipCalculator
 npm install
 npm run dev
 ```
@@ -21,15 +21,6 @@ Then open [http://localhost:5173](http://localhost:5173) in your browser.
 npm run build
 npm run preview
 ```
-
-## Deploy (Vercel — recommended)
-
-```bash
-npm i -g vercel
-vercel
-```
-
-Or connect the repo to [vercel.com](https://vercel.com) and it auto-deploys on every push. Zero config needed — Vite is detected automatically.
 
 ## Stack
 

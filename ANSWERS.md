@@ -5,8 +5,8 @@
 **Prerequisites:** Node.js ≥ 18
 
 ```bash
-git clone https://github.com/TaibaAsif123/tipsplit.git
-cd tipsplit
+https://github.com/TaibaAsif123/TipCalculator.git
+cd TipCalculator
 npm install
 npm run dev
 # → open http://localhost:5173
