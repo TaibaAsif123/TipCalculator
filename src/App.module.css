@@ -1,0 +1,383 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem 1rem 4rem;
+  background: var(--bg);
+}
+
+/* ── Header ── */
+.header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.wordmark {
+  font-family: var(--serif);
+  font-size: 2.25rem;
+  font-weight: 300;
+  color: var(--accent);
+  letter-spacing: -0.03em;
+  line-height: 1;
+  margin-bottom: 0.4rem;
+}
+
+.wordmark em {
+  font-style: italic;
+}
+
+.tagline {
+  font-size: 0.68rem;
+  color: var(--muted);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* ── Shell: two-column card ── */
+.shell {
+  width: 100%;
+  max-width: 740px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+/* ── Left panel: inputs ── */
+.inputs {
+  background: var(--surface);
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+/* ── Right panel: results ── */
+.results {
+  background: var(--surface2);
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.resultInner {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  height: 100%;
+}
+
+/* ── Field groups ── */
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.currency {
+  font-size: 0.65rem;
+  color: var(--muted2);
+  letter-spacing: 0.05em;
+  margin-left: auto;
+}
+
+/* ── Input wrapper ── */
+.inputWrap {
+  display: flex;
+  align-items: center;
+  background: var(--surface2);
+  border: 1px solid var(--border2);
+  border-radius: var(--radius-sm);
+  transition: border-color 0.15s ease;
+  overflow: hidden;
+}
+
+.inputWrap:focus-within {
+  border-color: var(--accent-dim);
+}
+
+.inputWrap.inputError {
+  border-color: var(--danger);
+  background: var(--danger-bg);
+}
+
+.prefix, .suffix {
+  padding: 0 0.65rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+  user-select: none;
+  flex-shrink: 0;
+}
+
+.input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--text);
+  font-family: var(--mono);
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.65rem 0.5rem;
+  min-width: 0;
+}
+
+.input::placeholder {
+  color: var(--muted2);
+  font-weight: 400;
+}
+
+.centred {
+  text-align: center;
+}
+
+/* ── Error message ── */
+.errorMsg {
+  font-size: 0.72rem;
+  color: var(--danger);
+  letter-spacing: 0.03em;
+  padding-left: 0.1rem;
+  animation: slideDown 0.15s ease;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Preset tip buttons ── */
+.presetRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1.5fr;
+  gap: 6px;
+}
+
+.presetBtn {
+  background: var(--surface2);
+  border: 1px solid var(--border2);
+  border-radius: var(--radius-sm);
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  padding: 0.6rem 0;
+  transition: all 0.12s ease;
+}
+
+.presetBtn:hover {
+  border-color: var(--muted);
+  color: var(--text);
+}
+
+.presetBtn.presetActive {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #0e0e0f;
+  font-weight: 500;
+}
+
+.customWrap {
+  grid-column: 4;
+}
+
+.customWrap.customActive {
+  border-color: var(--accent-dim);
+}
+
+.customInput {
+  padding: 0.6rem 0.4rem;
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+/* ── Stepper for people ── */
+.stepperRow {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr 2.5rem;
+  gap: 6px;
+  align-items: center;
+}
+
+.stepBtn {
+  background: var(--surface2);
+  border: 1px solid var(--border2);
+  border-radius: var(--radius-sm);
+  color: var(--muted);
+  font-size: 1.1rem;
+  height: 2.5rem;
+  transition: all 0.12s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stepBtn:hover {
+  border-color: var(--muted);
+  color: var(--text);
+}
+
+.stepperInput {
+  flex: 1;
+}
+
+/* ── Reset button ── */
+.resetBtn {
+  background: transparent;
+  border: 1px solid var(--border2);
+  border-radius: var(--radius-sm);
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.65rem 1rem;
+  margin-top: auto;
+  transition: all 0.15s ease;
+}
+
+.resetBtn:hover {
+  border-color: var(--danger);
+  color: var(--danger);
+}
+
+/* ── Results ── */
+.resultRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.1rem 0;
+}
+
+.resultLabel {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.resultValue {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--text);
+  transition: color 0.2s ease;
+}
+
+.divider {
+  height: 1px;
+  background: var(--border);
+}
+
+/* Hero row — per person */
+.heroRow {
+  padding: 1.5rem 0 1rem;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.heroLabel {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.2rem;
+}
+
+.heroSub {
+  font-size: 0.7rem;
+  color: var(--muted2);
+  letter-spacing: 0.06em;
+  min-height: 1rem;
+}
+
+.heroValue {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--accent);
+  font-family: var(--serif);
+  font-style: italic;
+  letter-spacing: -0.02em;
+  transition: all 0.2s ease;
+  text-align: right;
+}
+
+.dimmed {
+  opacity: 0.3;
+}
+
+.rounding {
+  font-size: 0.62rem;
+  color: var(--muted2);
+  letter-spacing: 0.04em;
+  border-top: 1px solid var(--border);
+  padding-top: 0.75rem;
+  margin-top: auto;
+}
+
+.placeholder {
+  font-size: 0.72rem;
+  color: var(--muted2);
+  text-align: center;
+  padding: 1rem 0 0.5rem;
+  letter-spacing: 0.04em;
+}
+
+/* ── Footer ── */
+.footer {
+  margin-top: 2.5rem;
+  font-size: 0.65rem;
+  color: var(--muted2);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* ── Responsive: single column on mobile ── */
+@media (max-width: 600px) {
+  .shell {
+    grid-template-columns: 1fr;
+    gap: 1px;
+  }
+
+  .inputs {
+    padding: 1.5rem 1.25rem;
+    gap: 1.4rem;
+  }
+
+  .results {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .wordmark {
+    font-size: 1.75rem;
+  }
+
+  .heroValue {
+    font-size: 1.6rem;
+  }
+
+  .presetRow {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .customWrap {
+    grid-column: 1 / -1;
+  }
+
+  .page {
+    padding: 1.5rem 0.75rem 3rem;
+  }
+}

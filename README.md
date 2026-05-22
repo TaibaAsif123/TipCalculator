@@ -1,16 +1,52 @@
-# React + Vite
+# TipSplit — Tip Calculator & Bill Splitter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A live, single-screen tip calculator and bill splitter. No "Calculate" button — results update as you type.
 
-Currently, two official plugins are available:
+## Run locally
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**Prerequisites:** Node.js ≥ 18
 
-## React Compiler
+```bash
+git clone https://github.com/TaibaAsif123/tipsplit.git
+cd tipsplit
+npm install
+npm run dev
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Then open [http://localhost:5173](http://localhost:5173) in your browser.
 
-## Expanding the ESLint configuration
+## Build for production
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm run build
+npm run preview
+```
+
+## Deploy (Vercel — recommended)
+
+```bash
+npm i -g vercel
+vercel
+```
+
+Or connect the repo to [vercel.com](https://vercel.com) and it auto-deploys on every push. Zero config needed — Vite is detected automatically.
+
+## Stack
+
+- **React 18** with Vite
+- **CSS Modules** — scoped styles, no CSS-in-JS overhead
+- No external UI libraries — all components hand-built
+- Fonts: DM Mono + Fraunces via Google Fonts
+
+## Project structure
+
+```
+src/
+  App.jsx          # All logic and UI
+  App.module.css   # Scoped styles
+  index.css        # Global tokens + reset
+  main.jsx         # React root
+index.html
+vite.config.js
+ANSWERS.md
+```
